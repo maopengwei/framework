@@ -1,0 +1,13 @@
+{
+    "name": "maopengwei/framework",
+    "description": "php framework",
+    "type": "framework",
+    "keywords": [
+        "php","php framework"
+    ],
+    "require":{
+        "php":">=5.3.0",
+        "filp/whoops":"*",
+        "symfony/var-dumper":"*"
+    }
+}

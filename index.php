@@ -14,12 +14,14 @@
 
  define('DEBUG',true);
 
+ include ROOT."/vendor/autoload.php";
+
  if(DEBUG){
     ini_set('display_error','On');
  }else{
     ini_set('display_error','off');
  }
-
+//dump($_SERVER);
  date_default_timezone_set('Asia/ShangHai');
 
  include CORE . '/common/function.php';
