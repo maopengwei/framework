@@ -42,6 +42,9 @@ class route
             $this->ctrl = conf::get('CTRL','route');
             $this->action = conf::get('ACTION','route');
         }
+        $message = 'route access:' . $this->ctrl . ' and ' . $this->action;
+        \core\lib\log::log($message);
+
     }
 
 

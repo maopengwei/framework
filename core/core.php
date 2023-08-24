@@ -8,9 +8,9 @@ class core
 
     static public function run()
     {
-        //p('immoc run function');
+        \core\lib\log::init();
+        
         $route = new \core\lib\route;
-        //P($route);
         $ctrl = $route->ctrl;
         $action = $route->action;
        

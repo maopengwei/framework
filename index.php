@@ -20,6 +20,8 @@
     ini_set('display_error','off');
  }
 
+ date_default_timezone_set('Asia/ShangHai');
+
  include CORE . '/common/function.php';
  include CORE . '/core.php';
 
