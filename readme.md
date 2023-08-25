@@ -7,6 +7,6 @@
 - 配置加载 ✅
 - 日志  ✅
 - composer加载 ✅
-- medoo数据库 🚗
+- medoo数据库 ✅
 - twig模版 🚗
 - .env文件使用 🚗
