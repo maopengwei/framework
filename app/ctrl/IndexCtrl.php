@@ -12,7 +12,7 @@ class IndexCtrl extends \core\core
         $sql = "select * from migrations";
         $rel = $model->query($sql);
         */
-        $data = 'hello world';
+        $data = 'hello index';
         $this->assign('data',$data);
         $this->display('index.html');
         
@@ -30,4 +30,15 @@ class IndexCtrl extends \core\core
         dump($data);
     }
 
+    public function twig(){
+        $data = 'hello twig';
+        $this->twigAssign('data',$data);
+        $this->twigDisplay('twig.html');
+    }
+
+    public function extend(){
+        $data = 'hello extend';
+        $this->twigAssign('data',$data);
+        $this->twigDisplay('extend.html');
+    }
 }

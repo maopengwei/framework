@@ -1,6 +1,8 @@
 <?php
 namespace core;
 
+use core\lib\conf;
+
 class core
 {
     public static $classMap = array();
@@ -49,7 +51,6 @@ class core
 
     public function display($file){
         $file =   APP.'/view/'.$file;
-
        
         try{
             extract($this->assign);
@@ -58,6 +59,27 @@ class core
         }catch(\Exception $e){
             echo $e->getMessage();
         }
+    }
+
+    public function twigAssign($name,$value){
+
+        $this->assign[$name] = $value;
+    }
+
+    public function twigDisplay($file){
+        $path =   APP.'/view/';
+
+        try{
+            $loader = new \Twig\Loader\FilesystemLoader($path);
+            $twig = new \Twig\Environment($loader, [
+                'cache' => conf::get('cache','twig'),
+            ]);
+            $template = $twig->load($file);
+            $template->display($this->assign?$this->assign:"");
+            
+        }catch(\Exception $e){
+            echo $e->getMessage();
+        }
     } 
 
-}
+}   
