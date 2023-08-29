@@ -10,6 +10,7 @@
         "filp/whoops":"*",
         "symfony/var-dumper":"*",
         "catfan/medoo":"*",
-        "twig/twig":"*"
+        "twig/twig":"*",
+        "vlucas/phpdotenv": "^5.5"
     }
 }

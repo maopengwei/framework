@@ -9,13 +9,16 @@
 
  define('ROOT', realpath('./'));
 
+ include ROOT."/vendor/autoload.php";
+
+ $dotenv = Dotenv\Dotenv::createImmutable(ROOT);
+ $dotenv->load();
+
  define('CORE',ROOT.'/core');
  define('APP',ROOT.'/app');
 
- define('DEBUG',true);
-
- include ROOT."/vendor/autoload.php";
-
+ define('DEBUG',$_ENV['DEBUG']);
+ 
  if(DEBUG){
     ini_set('display_error','On');
  }else{
